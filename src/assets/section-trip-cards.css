@@ -1,0 +1,23 @@
+.section-trip-cards {
+  padding-block: 52px;
+}
+
+.section-trip-cards .section__title {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.section-trip-cards .section__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  row-gap: 24px;
+  padding: 0;
+  margin: 0 -12px;
+}
+
+.section-trip-cards .section__list li {
+  width: 25%;
+  padding: 0 12px;
+}

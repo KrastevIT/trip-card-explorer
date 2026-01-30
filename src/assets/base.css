@@ -1,0 +1,31 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --red: #e84d4d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: var(--black);
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  max-width: 1480px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
