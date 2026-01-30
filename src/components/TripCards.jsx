@@ -8,6 +8,7 @@ export default function TripCards() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const [sortByRating, setSortByRating] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -63,9 +64,21 @@ export default function TripCards() {
               </svg>
             </div>
 
+            <button
+              className={`section__sort ${sortByRating ? "active" : ""}`}
+              type="button"
+              onClick={() => setSortByRating(!sortByRating)}
+            >
+              Sort by Rating
+            </button>
+
             <ul className="section__list">
               {trips
               .filter((trip) => !searchTerm || trip.name?.toLowerCase().includes(searchTerm.toLowerCase()))
+              .sort((a, b) => {
+                if (!sortByRating) return 0;
+                return b.rating - a.rating;
+              })
               .map(trip => (
                 <li key={trip.id}>
                   <TripCard

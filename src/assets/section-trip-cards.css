@@ -31,6 +31,21 @@
   transform: translateY(-50%);
 }
 
+.section-trip-cards .section__sort {
+  display: block;
+  background: transparent;
+  margin: 0 0 12px auto;
+  padding: 8px;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.section-trip-cards .section__sort.active {
+  background: var(--black);
+  color: var(--white);
+}
+
 .section-trip-cards .section__list {
   display: flex;
   flex-wrap: wrap;
