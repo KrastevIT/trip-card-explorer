@@ -15,7 +15,7 @@ export default function TripCards() {
       try {
         setLoading(true);
 
-        const res = await fetch("../public/data.json");
+        const res = await fetch("/data.json");
 
         setLoading(false);
 

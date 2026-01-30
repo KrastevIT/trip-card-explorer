@@ -9,7 +9,7 @@ export default function TripCard(props) {
     <div className="trip-card">
       <div className="trip__media media media--1-1">
         {props.image && (
-          <img src={imageError ? '../placeholder.png' : props.image} alt={props.name} onError={() => setImageError(true)}/>
+          <img src={imageError ? '/placeholder.png' : props.image} alt={props.name} onError={() => setImageError(true)}/>
         )}
       </div>
 
