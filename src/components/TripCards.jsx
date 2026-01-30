@@ -30,6 +30,14 @@ export default function TripCards() {
   return (
     <div className="section-trip-cards">
       <div className="container">
+        {loading && (
+          <div className="loading">Loading...</div>
+        )}
+
+        {error && (
+          <div className="error">{error}</div>
+        )}
+
         {trips.length > 0 && (
           <>
             <h1 className="section__title">

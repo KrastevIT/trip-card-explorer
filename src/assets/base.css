@@ -29,3 +29,17 @@ body {
   margin: 0 auto;
   padding-inline: 20px;
 }
+
+.loading,
+.error {
+  text-align: center;
+  margin-block: 20px;
+}
+
+.loading {
+  color: var(--light-green);
+}
+
+.error {
+  color: var(--red);
+}
