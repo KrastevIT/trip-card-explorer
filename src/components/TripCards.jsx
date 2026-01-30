@@ -1,5 +1,7 @@
 import '../assets/section-trip-cards.css'
+import '../assets/trip-card.css'
 import { useEffect, useState } from "react";
+import TripCard from './TripCard';
 
 export default function TripCards() {
   const [trips, setTrips] = useState([]);
@@ -47,7 +49,13 @@ export default function TripCards() {
             <ul className="section__list">
               {trips.map(trip => (
                 <li key={trip.id}>
-                  <p>{trip.name}</p>
+                  <TripCard
+                    name={trip.name}
+                    image={trip.image}
+                    description={trip.description}
+                    longDescription={trip.long_description}
+                    rating={trip.rating}
+                  />
                 </li>
               ))}
             </ul>

@@ -2,6 +2,7 @@
   --black: #000;
   --white: #fff;
   --red: #e84d4d;
+  --light-green: #85cba4;
 }
 
 *,
@@ -42,4 +43,34 @@ body {
 
 .error {
   color: var(--red);
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media--1-1 img {
+  aspect-ratio: 1/1;
+}
+
+.button {
+	font-family: Avenir, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	text-align: center;
+	color: var(--white);
+	background: var(--light-green);
+	border: none;
+	padding-inline: 16px;
+	min-height: 40px;
+	border-radius: 8px;
+	transition: opacity 0.2s;
+	cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
 }

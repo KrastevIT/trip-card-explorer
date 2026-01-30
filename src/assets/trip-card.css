@@ -1,0 +1,51 @@
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.trip-card .trip__media {
+  aspect-ratio: 1/1;
+  margin-bottom: 4px;
+}
+
+.trip-card .trip__media img {
+  border-radius: 8px;
+}
+
+.trip-card .trip__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.trip-card .trip__name {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.trip-card .trip__rating {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.trip-card .trip__rating-number {
+  margin: 0 4px 0 0;
+}
+
+.trip-card .trip__description {
+  margin-bottom: 24px;
+}
+
+.trip-card .trip__description p {
+  margin: 0;
+}
+
+.trip-card .trip__description p + p {
+  margin-top: 8px;
+}
+
+.trip-card .trip__actions {
+  margin-top: auto;
+}
