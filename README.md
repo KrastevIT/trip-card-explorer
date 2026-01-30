@@ -1,16 +1,50 @@
-# React + Vite
+# Trip Card Explorer - Candidate Project React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Clone the repository
 
-Currently, two official plugins are available:
+```bash
+git clone git@github.com:KrastevIT/trip-card-explorer.git
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Install dependencies
 
-## React Compiler
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Start the development server
 
-## Expanding the ESLint configuration
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Design decisions
+
+### Component structure
+The application is split into small, focused components such as TripCards, TripCard, and TripDescriptionModal to keep the codebase readable and easy to maintain.
+
+### Local data
+Data is fetched from a local data.json file located in the public folder to simulate an API request.
+
+### React Hooks
+useState and useEffect are used for state management and data fetching.
+
+### UI/UX focus
+A clean card-based layout with a modal for detailed information was chosen to keep the main view uncluttered and user-friendly.
+
+### Styles
+The BEM methodology is used for styling sections and elements. Each block has its own CSS file, organized within the assets folder, to improve structure and maintainability.
+
+### Responsive layout
+Media queries are applied at key breakpoints, 767px and 480px, to ensure a good experience across devices.
+
+## Trade-offs
+
+### No global state management
+Context or Redux was intentionally avoided since the app is small and local state is sufficient.
+
+### No external UI libraries
+Styling is done with plain CSS to keep dependencies minimal and focus on core React fundamentals.
+
+### Mock API instead of real backend
+Using a local JSON file simplifies development but does not cover real network scenarios like pagination or authentication.
