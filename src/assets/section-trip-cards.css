@@ -21,3 +21,15 @@
   width: 25%;
   padding: 0 12px;
 }
+
+@media (max-width: 767px) {
+  .section-trip-cards .section__list li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-trip-cards .section__list li {
+    width: 100%;
+  }
+}
