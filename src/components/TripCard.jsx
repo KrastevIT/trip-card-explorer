@@ -1,6 +1,8 @@
 import { useState } from "react";
+import TripDescriptionModal from "./TripDescriptionModal";
 
 export default function TripCard(props) {
+  const [isOpenDescription, setIsOpenDescription] = useState(false);
   const [imageError, setImageError] = useState(false)
 
   return (
@@ -32,7 +34,14 @@ export default function TripCard(props) {
 
         {props.longDescription && (
           <div className="trip__actions">
-            <button className="button" type="button">More Info</button>
+            <button onClick={() => setIsOpenDescription(true)} className="button" type="button">More Info</button>
+
+            {isOpenDescription && (
+              <TripDescriptionModal
+                setIsOpen={setIsOpenDescription}
+                description={props.longDescription}
+              />
+            )}
           </div>
         )}
       </div>
